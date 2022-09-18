@@ -1,0 +1,200 @@
+2022-09-19 00:00:48.020  INFO 6721 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 00:00:48.031  INFO 6721 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-19 00:00:48.043  INFO 6721 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-19 00:00:56.567  INFO 7274 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 7274 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-19 00:00:56.570  INFO 7274 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-19 00:00:56.655  INFO 7274 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-19 00:00:56.656  INFO 7274 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-19 00:00:57.921  INFO 7274 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-19 00:00:58.013  INFO 7274 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interfaces.
+2022-09-19 00:00:59.272  INFO 7274 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-19 00:00:59.305  INFO 7274 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-19 00:00:59.307  INFO 7274 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-19 00:00:59.503  INFO 7274 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-19 00:00:59.504  INFO 7274 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2846 ms
+2022-09-19 00:00:59.874  INFO 7274 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-19 00:00:59.958  INFO 7274 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-19 00:01:00.202  INFO 7274 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-19 00:01:00.319  INFO 7274 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-19 00:01:00.837  INFO 7274 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-19 00:01:00.874  INFO 7274 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-19 00:01:01.766  INFO 7274 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-19 00:01:01.776  INFO 7274 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 00:01:02.418  WARN 7274 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-19 00:01:02.900  WARN 7274 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-19 00:01:03.070  INFO 7274 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-19 00:01:03.156  INFO 7274 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-19 00:01:03.172  INFO 7274 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 7.344 seconds (JVM running for 8.237)
+2022-09-19 00:01:03.181  INFO 7274 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+Hello! Welcome to Book Store Project!
+2022-09-19 00:01:22.287  INFO 7274 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-19 00:01:22.288  INFO 7274 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-19 00:01:22.291  INFO 7274 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-09-19 00:02:59.096  INFO 7274 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 00:02:59.102  INFO 7274 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-19 00:02:59.123  INFO 7274 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-19 00:03:05.325  INFO 7486 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 7486 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-19 00:03:05.328  INFO 7486 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-19 00:03:05.432  INFO 7486 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-19 00:03:05.432  INFO 7486 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-19 00:03:06.497  INFO 7486 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-19 00:03:06.574  INFO 7486 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interfaces.
+2022-09-19 00:03:07.562  INFO 7486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-19 00:03:07.576  INFO 7486 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-19 00:03:07.577  INFO 7486 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-19 00:03:07.664  INFO 7486 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-19 00:03:07.665  INFO 7486 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2231 ms
+2022-09-19 00:03:07.916  INFO 7486 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-19 00:03:07.968  INFO 7486 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-19 00:03:08.163  INFO 7486 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-19 00:03:08.279  INFO 7486 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-19 00:03:08.718  INFO 7486 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-19 00:03:08.756  INFO 7486 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-19 00:03:09.543  INFO 7486 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-19 00:03:09.551  INFO 7486 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 00:03:10.057  WARN 7486 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-19 00:03:10.420  WARN 7486 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-19 00:03:10.546  INFO 7486 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-19 00:03:10.583  INFO 7486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-19 00:03:10.601  INFO 7486 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 5.934 seconds (JVM running for 6.718)
+2022-09-19 00:03:10.606  INFO 7486 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+Hello! Welcome to Book Store Project!
+2022-09-19 00:03:29.079  INFO 7486 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-19 00:03:29.080  INFO 7486 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-19 00:03:29.082  INFO 7486 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-09-19 00:07:51.724  INFO 7486 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 00:07:51.729  INFO 7486 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-19 00:07:51.748  INFO 7486 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-19 00:07:59.558  INFO 7715 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 7715 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-19 00:07:59.560  INFO 7715 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-19 00:07:59.644  INFO 7715 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-19 00:07:59.645  INFO 7715 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-19 00:08:00.788  INFO 7715 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-19 00:08:00.854  INFO 7715 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
+2022-09-19 00:08:01.767  INFO 7715 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-19 00:08:01.780  INFO 7715 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-19 00:08:01.780  INFO 7715 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-19 00:08:01.865  INFO 7715 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-19 00:08:01.866  INFO 7715 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2220 ms
+2022-09-19 00:08:02.105  INFO 7715 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-19 00:08:02.178  INFO 7715 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-19 00:08:02.377  INFO 7715 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-19 00:08:02.477  INFO 7715 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-19 00:08:02.908  INFO 7715 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-19 00:08:02.945  INFO 7715 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-19 00:08:03.744  INFO 7715 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-19 00:08:03.753  INFO 7715 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 00:08:04.272  WARN 7715 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-19 00:08:04.698  WARN 7715 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-19 00:08:04.819  INFO 7715 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-19 00:08:04.860  INFO 7715 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-19 00:08:04.877  INFO 7715 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 6.073 seconds (JVM running for 6.915)
+2022-09-19 00:08:04.882  INFO 7715 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+Hello! Welcome to Book Store Project!
+2022-09-19 00:08:19.962  INFO 7715 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-19 00:08:19.963  INFO 7715 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-19 00:08:19.965  INFO 7715 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-09-19 00:08:23.308  WARN 7715 --- [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: ID: 2, does not exist]
+2022-09-19 00:09:02.068  WARN 7715 --- [http-nio-9090-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: Email Address: skntime0@gmail.co, does not exist]
+2022-09-19 00:10:45.375  WARN 7715 --- [http-nio-9090-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-09-19 00:12:59.729  WARN 7715 --- [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: Error: Cannot find User ID 3]
+2022-09-19 00:13:52.174  WARN 7715 --- [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
+2022-09-19 00:13:58.234  WARN 7715 --- [http-nio-9090-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-09-19 00:14:21.565  WARN 7715 --- [http-nio-9090-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: Login Failed, Wrong Password!!!]
+2022-09-19 00:16:25.278  WARN 7715 --- [http-nio-9090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: Invalid Email Address]
+2022-09-19 00:17:02.539  WARN 7715 --- [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: Invalid Email Address]
+2022-09-19 00:17:23.182  WARN 7715 --- [http-nio-9090-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-09-19 00:27:51.499  INFO 7715 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 00:27:51.502  INFO 7715 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-19 00:27:51.516  INFO 7715 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-19 00:27:58.670  INFO 8391 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 8391 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-19 00:27:58.672  INFO 8391 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-19 00:27:58.759  INFO 8391 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-19 00:27:58.760  INFO 8391 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-19 00:27:59.823  INFO 8391 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-19 00:27:59.898  INFO 8391 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interfaces.
+2022-09-19 00:28:00.749  INFO 8391 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-19 00:28:00.762  INFO 8391 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-19 00:28:00.763  INFO 8391 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-19 00:28:00.833  INFO 8391 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-19 00:28:00.833  INFO 8391 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2071 ms
+2022-09-19 00:28:01.060  INFO 8391 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-19 00:28:01.108  INFO 8391 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-19 00:28:01.280  INFO 8391 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-19 00:28:01.371  INFO 8391 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-19 00:28:01.788  INFO 8391 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-19 00:28:01.817  INFO 8391 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-19 00:28:02.514  INFO 8391 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-19 00:28:02.522  INFO 8391 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 00:28:02.993  WARN 8391 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-19 00:28:03.336  WARN 8391 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-19 00:28:03.442  INFO 8391 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-19 00:28:03.479  INFO 8391 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-19 00:28:03.493  INFO 8391 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 5.461 seconds (JVM running for 6.183)
+2022-09-19 00:28:03.497  INFO 8391 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+Hello! Welcome to Book Store Project!
+2022-09-19 00:28:15.590  INFO 8391 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-19 00:28:15.591  INFO 8391 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-19 00:28:15.593  INFO 8391 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-09-19 00:29:45.074  INFO 8391 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 00:29:45.079  INFO 8391 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-19 00:29:45.088  INFO 8391 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-19 00:29:50.115  INFO 8561 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 8561 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-19 00:29:50.118  INFO 8561 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-19 00:29:50.197  INFO 8561 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-19 00:29:50.198  INFO 8561 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-19 00:29:51.247  INFO 8561 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-19 00:29:51.306  INFO 8561 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interfaces.
+2022-09-19 00:29:52.183  INFO 8561 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-19 00:29:52.195  INFO 8561 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-19 00:29:52.195  INFO 8561 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-19 00:29:52.276  INFO 8561 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-19 00:29:52.277  INFO 8561 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2078 ms
+2022-09-19 00:29:52.470  INFO 8561 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-19 00:29:52.513  INFO 8561 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-19 00:29:52.674  INFO 8561 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-19 00:29:52.759  INFO 8561 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-19 00:29:53.128  INFO 8561 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-19 00:29:53.156  INFO 8561 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-19 00:29:53.832  INFO 8561 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-19 00:29:53.840  INFO 8561 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 00:29:54.287  WARN 8561 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-19 00:29:54.654  WARN 8561 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-19 00:29:54.768  INFO 8561 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-19 00:29:54.799  INFO 8561 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-19 00:29:54.814  INFO 8561 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 5.338 seconds (JVM running for 6.072)
+2022-09-19 00:29:54.820  INFO 8561 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+Hello! Welcome to Book Store Project!
+2022-09-19 00:30:30.390  INFO 8561 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 00:30:30.395  INFO 8561 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-19 00:30:30.411  INFO 8561 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-19 00:30:35.605  INFO 8688 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 8688 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-19 00:30:35.608  INFO 8688 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-19 00:30:35.682  INFO 8688 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-19 00:30:35.682  INFO 8688 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-19 00:30:36.686  INFO 8688 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-19 00:30:36.753  INFO 8688 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interfaces.
+2022-09-19 00:30:37.646  INFO 8688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-19 00:30:37.659  INFO 8688 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-19 00:30:37.660  INFO 8688 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-19 00:30:37.733  INFO 8688 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-19 00:30:37.734  INFO 8688 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2051 ms
+2022-09-19 00:30:37.941  INFO 8688 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-19 00:30:37.989  INFO 8688 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-19 00:30:38.166  INFO 8688 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-19 00:30:38.275  INFO 8688 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-19 00:30:38.718  INFO 8688 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-19 00:30:38.748  INFO 8688 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-19 00:30:39.443  INFO 8688 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-19 00:30:39.452  INFO 8688 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-19 00:30:39.904  WARN 8688 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-19 00:30:40.242  WARN 8688 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-19 00:30:40.360  INFO 8688 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-19 00:30:40.400  INFO 8688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-19 00:30:40.421  INFO 8688 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 5.45 seconds (JVM running for 6.117)
+2022-09-19 00:30:40.427  INFO 8688 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+Hello! Welcome to Book Store Project!
+2022-09-19 00:30:45.515  INFO 8688 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-19 00:30:45.516  INFO 8688 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-19 00:30:45.517  INFO 8688 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-19 00:31:00.045  WARN 8688 --- [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
