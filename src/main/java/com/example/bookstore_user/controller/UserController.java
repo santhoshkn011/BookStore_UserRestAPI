@@ -116,4 +116,5 @@ public class UserController {
         ResponseDTO responseDTO = new ResponseDTO("Password Reset", response);
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
     }
+
 }
