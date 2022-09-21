@@ -45,6 +45,13 @@ public class UserController {
         return new ResponseEntity(respDTO, HttpStatus.OK);
     }
 
+    //Get User Data by token (Microservice)
+    @GetMapping("/GetUser/{token}")
+    public UserDetails getUserDetailsByToken(@PathVariable String token) {
+        UserDetails userData = userService.getUserDetailsByToken(token);
+        return userData;
+    }
+
     //Get all data
     @GetMapping("/allUser")
     public ResponseEntity<ResponseDTO> getAllUserDetails() {
@@ -55,10 +62,18 @@ public class UserController {
 
     //Get User Data by ID
     @GetMapping("/id/{id}")
-    public ResponseEntity<ResponseDTO> getUserById(@PathVariable Long id) {
+    public ResponseEntity<ResponseDTO> getUserDetailsById(@PathVariable Long id) {
         UserDetails userDetails = userService.getUserDataById(id);
         ResponseDTO responseDTO = new ResponseDTO("User Details with the ID: " + id, userDetails);
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
+    }
+
+
+    //Get User Data by ID (Microservices)
+    @GetMapping("/Id/{id}")
+    public UserDetails getUserById(@PathVariable Long id) {
+        UserDetails userDetails = userService.getUserDetailsById(id);
+        return userDetails;
     }
 
     //Get User Data by Email Address
@@ -116,5 +131,4 @@ public class UserController {
         ResponseDTO responseDTO = new ResponseDTO("Password Reset", response);
         return new ResponseEntity<>(responseDTO, HttpStatus.OK);
     }
-
 }

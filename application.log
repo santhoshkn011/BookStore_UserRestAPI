@@ -1,200 +1,656 @@
-2022-09-19 00:00:48.020  INFO 6721 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-09-19 00:00:48.031  INFO 6721 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-09-19 00:00:48.043  INFO 6721 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-09-19 00:00:56.567  INFO 7274 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 7274 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
-2022-09-19 00:00:56.570  INFO 7274 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
-2022-09-19 00:00:56.655  INFO 7274 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-09-19 00:00:56.656  INFO 7274 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-09-19 00:00:57.921  INFO 7274 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-19 00:00:58.013  INFO 7274 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interfaces.
-2022-09-19 00:00:59.272  INFO 7274 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2022-09-19 00:00:59.305  INFO 7274 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-19 00:00:59.307  INFO 7274 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-19 00:00:59.503  INFO 7274 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-19 00:00:59.504  INFO 7274 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2846 ms
-2022-09-19 00:00:59.874  INFO 7274 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-19 00:00:59.958  INFO 7274 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-19 00:01:00.202  INFO 7274 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-19 00:01:00.319  INFO 7274 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-19 00:01:00.837  INFO 7274 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-19 00:01:00.874  INFO 7274 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-09-19 00:01:01.766  INFO 7274 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-19 00:01:01.776  INFO 7274 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-19 00:01:02.418  WARN 7274 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-19 00:01:02.900  WARN 7274 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2022-09-19 00:01:03.070  INFO 7274 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-09-19 00:01:03.156  INFO 7274 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2022-09-19 00:01:03.172  INFO 7274 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 7.344 seconds (JVM running for 8.237)
-2022-09-19 00:01:03.181  INFO 7274 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+2022-09-21 07:53:29.252  INFO 4869 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 4869 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-21 07:53:29.280  INFO 4869 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-21 07:53:29.447  INFO 4869 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-21 07:53:29.450  INFO 4869 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-21 07:53:31.502  INFO 4869 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-21 07:53:31.773  INFO 4869 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 253 ms. Found 1 JPA repository interfaces.
+2022-09-21 07:53:32.426  INFO 4869 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=48f5dd24-1cab-321f-9892-82647179fed9
+2022-09-21 07:53:34.257  INFO 4869 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-21 07:53:34.286  INFO 4869 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-21 07:53:34.297  INFO 4869 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-21 07:53:34.610  INFO 4869 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-21 07:53:34.611  INFO 4869 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5159 ms
+2022-09-21 07:53:35.112  INFO 4869 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-21 07:53:35.295  INFO 4869 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-21 07:53:35.883  INFO 4869 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-21 07:53:36.165  INFO 4869 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-21 07:53:37.190  INFO 4869 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-21 07:53:37.291  INFO 4869 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-21 07:53:38.619  INFO 4869 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-21 07:53:38.633  INFO 4869 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 07:53:39.817  WARN 4869 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-21 07:53:40.561  WARN 4869 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-21 07:53:40.959  WARN 4869 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-09-21 07:53:41.161  INFO 4869 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-09-21 07:53:41.512  WARN 4869 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-21 07:53:41.651  INFO 4869 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-09-21 07:53:41.864  INFO 4869 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-09-21 07:53:41.873  INFO 4869 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 07:53:41.928  INFO 4869 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-09-21 07:53:41.945  INFO 4869 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-09-21 07:53:41.946  INFO 4869 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-09-21 07:53:41.946  INFO 4869 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-09-21 07:53:41.947  INFO 4869 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-09-21 07:53:41.949  INFO 4869 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-09-21 07:53:41.949  INFO 4869 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-09-21 07:53:42.846  INFO 4869 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-09-21 07:53:42.850  INFO 4869 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-09-21 07:53:42.855  INFO 4869 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-09-21 07:53:42.863  INFO 4869 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1663727022861 with initial instances count: 0
+2022-09-21 07:53:42.868  INFO 4869 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKSTOREAPP_USER with eureka with status UP
+2022-09-21 07:53:42.869  INFO 4869 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663727022869, current=UP, previous=STARTING]
+2022-09-21 07:53:42.871  INFO 4869 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 07:53:42.906  INFO 4869 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-21 07:53:42.908  INFO 4869 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9090
+2022-09-21 07:53:42.975  INFO 4869 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 15.388 seconds (JVM running for 16.83)
+2022-09-21 07:53:42.994  INFO 4869 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
 Hello! Welcome to Book Store Project!
-2022-09-19 00:01:22.287  INFO 7274 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-19 00:01:22.288  INFO 7274 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-19 00:01:22.291  INFO 7274 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-2022-09-19 00:02:59.096  INFO 7274 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-09-19 00:02:59.102  INFO 7274 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-09-19 00:02:59.123  INFO 7274 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-09-19 00:03:05.325  INFO 7486 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 7486 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
-2022-09-19 00:03:05.328  INFO 7486 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
-2022-09-19 00:03:05.432  INFO 7486 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-09-19 00:03:05.432  INFO 7486 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-09-19 00:03:06.497  INFO 7486 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-19 00:03:06.574  INFO 7486 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interfaces.
-2022-09-19 00:03:07.562  INFO 7486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2022-09-19 00:03:07.576  INFO 7486 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-19 00:03:07.577  INFO 7486 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-19 00:03:07.664  INFO 7486 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-19 00:03:07.665  INFO 7486 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2231 ms
-2022-09-19 00:03:07.916  INFO 7486 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-19 00:03:07.968  INFO 7486 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-19 00:03:08.163  INFO 7486 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-19 00:03:08.279  INFO 7486 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-19 00:03:08.718  INFO 7486 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-19 00:03:08.756  INFO 7486 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-09-19 00:03:09.543  INFO 7486 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-19 00:03:09.551  INFO 7486 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-19 00:03:10.057  WARN 7486 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-19 00:03:10.420  WARN 7486 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2022-09-19 00:03:10.546  INFO 7486 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-09-19 00:03:10.583  INFO 7486 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2022-09-19 00:03:10.601  INFO 7486 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 5.934 seconds (JVM running for 6.718)
-2022-09-19 00:03:10.606  INFO 7486 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+2022-09-21 07:53:43.105  INFO 4869 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 07:54:12.850  INFO 4869 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-09-21 07:54:12.850  INFO 4869 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-09-21 07:54:12.851  INFO 4869 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-09-21 07:54:12.851  INFO 4869 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-09-21 07:54:12.851  INFO 4869 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-09-21 07:54:12.851  INFO 4869 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-09-21 07:54:12.851  INFO 4869 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-09-21 07:54:12.867  INFO 4869 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-09-21 07:58:41.955  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 08:03:41.957  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 08:08:41.958  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 08:13:41.959  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 08:18:41.961  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 08:23:41.962  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 08:28:41.964  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 08:33:41.965  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 08:38:41.967  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 08:43:41.969  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 08:48:41.971  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 08:53:41.972  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 08:58:41.974  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 09:43:41.538  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 09:48:06.427  INFO 4869 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-21 09:48:06.428  INFO 4869 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-21 09:48:06.431  INFO 4869 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-09-21 09:48:41.539  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 09:53:41.540  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 09:58:41.542  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 10:03:41.542  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 10:08:41.543  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 10:13:41.545  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 10:18:42.606  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 10:23:42.607  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 10:28:42.608  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 10:33:42.610  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 10:38:42.611  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 10:43:42.612  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 10:48:42.613  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 10:53:42.615  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 10:58:42.617  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:03:42.618  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:08:42.620  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:13:42.621  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:18:42.622  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:23:42.624  INFO 4869 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:26:52.777  INFO 4869 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKSTOREAPP_USER with eureka with status DOWN
+2022-09-21 11:26:52.778  INFO 4869 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663739812778, current=DOWN, previous=UP]
+2022-09-21 11:26:52.778  INFO 4869 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 11:26:52.785  INFO 4869 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 11:26:52.794  INFO 4869 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 11:26:52.797  INFO 4869 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-21 11:26:52.803  INFO 4869 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-21 11:26:52.804  INFO 4869 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-09-21 11:26:55.809  INFO 4869 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-09-21 11:26:55.814  INFO 4869 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - deregister  status: 200
+2022-09-21 11:26:55.825  INFO 4869 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-09-21 11:27:00.093  INFO 16647 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 16647 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-21 11:27:00.096  INFO 16647 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-21 11:27:00.162  INFO 16647 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-21 11:27:00.163  INFO 16647 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-21 11:27:01.068  INFO 16647 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-21 11:27:01.199  INFO 16647 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 1 JPA repository interfaces.
+2022-09-21 11:27:01.502  INFO 16647 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=48f5dd24-1cab-321f-9892-82647179fed9
+2022-09-21 11:27:02.330  INFO 16647 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-21 11:27:02.341  INFO 16647 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-21 11:27:02.342  INFO 16647 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-21 11:27:02.417  INFO 16647 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-21 11:27:02.418  INFO 16647 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2254 ms
+2022-09-21 11:27:02.580  INFO 16647 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-21 11:27:02.643  INFO 16647 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-21 11:27:02.787  INFO 16647 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-21 11:27:02.882  INFO 16647 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-21 11:27:03.204  INFO 16647 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-21 11:27:03.235  INFO 16647 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-21 11:27:03.832  INFO 16647 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-21 11:27:03.840  INFO 16647 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 11:27:04.244  WARN 16647 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-21 11:27:04.547  WARN 16647 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-21 11:27:04.700  WARN 16647 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-09-21 11:27:04.806  INFO 16647 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-09-21 11:27:04.959  WARN 16647 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-21 11:27:04.988  INFO 16647 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-09-21 11:27:05.099  INFO 16647 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-09-21 11:27:05.105  INFO 16647 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:27:05.133  INFO 16647 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-09-21 11:27:05.133  INFO 16647 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-09-21 11:27:05.133  INFO 16647 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-09-21 11:27:05.134  INFO 16647 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-09-21 11:27:05.134  INFO 16647 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-09-21 11:27:05.134  INFO 16647 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-09-21 11:27:05.134  INFO 16647 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-09-21 11:27:05.473  INFO 16647 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-09-21 11:27:05.476  INFO 16647 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-09-21 11:27:05.480  INFO 16647 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-09-21 11:27:05.487  INFO 16647 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1663739825486 with initial instances count: 2
+2022-09-21 11:27:05.489  INFO 16647 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKSTOREAPP_USER with eureka with status UP
+2022-09-21 11:27:05.490  INFO 16647 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663739825490, current=UP, previous=STARTING]
+2022-09-21 11:27:05.492  INFO 16647 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 11:27:05.512  INFO 16647 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-21 11:27:05.513  INFO 16647 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9090
+2022-09-21 11:27:05.537  INFO 16647 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 11:27:05.560  INFO 16647 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 6.075 seconds (JVM running for 6.739)
+2022-09-21 11:27:05.565  INFO 16647 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
 Hello! Welcome to Book Store Project!
-2022-09-19 00:03:29.079  INFO 7486 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-19 00:03:29.080  INFO 7486 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-19 00:03:29.082  INFO 7486 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-09-19 00:07:51.724  INFO 7486 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-09-19 00:07:51.729  INFO 7486 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-09-19 00:07:51.748  INFO 7486 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-09-19 00:07:59.558  INFO 7715 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 7715 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
-2022-09-19 00:07:59.560  INFO 7715 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
-2022-09-19 00:07:59.644  INFO 7715 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-09-19 00:07:59.645  INFO 7715 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-09-19 00:08:00.788  INFO 7715 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-19 00:08:00.854  INFO 7715 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interfaces.
-2022-09-19 00:08:01.767  INFO 7715 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2022-09-19 00:08:01.780  INFO 7715 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-19 00:08:01.780  INFO 7715 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-19 00:08:01.865  INFO 7715 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-19 00:08:01.866  INFO 7715 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2220 ms
-2022-09-19 00:08:02.105  INFO 7715 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-19 00:08:02.178  INFO 7715 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-19 00:08:02.377  INFO 7715 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-19 00:08:02.477  INFO 7715 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-19 00:08:02.908  INFO 7715 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-19 00:08:02.945  INFO 7715 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-09-19 00:08:03.744  INFO 7715 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-19 00:08:03.753  INFO 7715 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-19 00:08:04.272  WARN 7715 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-19 00:08:04.698  WARN 7715 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2022-09-19 00:08:04.819  INFO 7715 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-09-19 00:08:04.860  INFO 7715 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2022-09-19 00:08:04.877  INFO 7715 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 6.073 seconds (JVM running for 6.915)
-2022-09-19 00:08:04.882  INFO 7715 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+2022-09-21 11:27:14.785  INFO 16647 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-21 11:27:14.785  INFO 16647 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-21 11:27:14.787  INFO 16647 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-09-21 11:29:19.049  INFO 16647 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKSTOREAPP_USER with eureka with status DOWN
+2022-09-21 11:29:19.049  INFO 16647 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663739959049, current=DOWN, previous=UP]
+2022-09-21 11:29:19.050  INFO 16647 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 11:29:19.057  INFO 16647 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 11:29:19.070  INFO 16647 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 11:29:19.074  INFO 16647 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-21 11:29:19.082  INFO 16647 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-21 11:29:19.083  INFO 16647 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-09-21 11:29:22.096  INFO 16647 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-09-21 11:29:22.102  INFO 16647 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - deregister  status: 200
+2022-09-21 11:29:22.113  INFO 16647 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-09-21 11:29:25.318  INFO 16972 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 16972 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-21 11:29:25.320  INFO 16972 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-21 11:29:25.375  INFO 16972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-21 11:29:25.376  INFO 16972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-21 11:29:26.328  INFO 16972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-21 11:29:26.492  INFO 16972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151 ms. Found 1 JPA repository interfaces.
+2022-09-21 11:29:26.844  INFO 16972 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=48f5dd24-1cab-321f-9892-82647179fed9
+2022-09-21 11:29:27.591  INFO 16972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-21 11:29:27.602  INFO 16972 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-21 11:29:27.602  INFO 16972 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-21 11:29:27.703  INFO 16972 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-21 11:29:27.704  INFO 16972 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2328 ms
+2022-09-21 11:29:27.898  INFO 16972 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-21 11:29:27.954  INFO 16972 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-21 11:29:28.089  INFO 16972 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-21 11:29:28.181  INFO 16972 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-21 11:29:28.496  INFO 16972 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-21 11:29:28.518  INFO 16972 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-21 11:29:29.168  INFO 16972 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-21 11:29:29.177  INFO 16972 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 11:29:29.658  WARN 16972 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-21 11:29:29.997  WARN 16972 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-21 11:29:30.161  WARN 16972 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-09-21 11:29:30.254  INFO 16972 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-09-21 11:29:30.433  WARN 16972 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-21 11:29:30.463  INFO 16972 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-09-21 11:29:30.575  INFO 16972 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-09-21 11:29:30.580  INFO 16972 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:29:30.608  INFO 16972 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-09-21 11:29:30.609  INFO 16972 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-09-21 11:29:30.609  INFO 16972 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-09-21 11:29:30.610  INFO 16972 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-09-21 11:29:30.610  INFO 16972 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-09-21 11:29:30.610  INFO 16972 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-09-21 11:29:30.610  INFO 16972 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-09-21 11:29:30.933  INFO 16972 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-09-21 11:29:30.936  INFO 16972 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-09-21 11:29:30.939  INFO 16972 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-09-21 11:29:30.945  INFO 16972 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1663739970944 with initial instances count: 2
+2022-09-21 11:29:30.948  INFO 16972 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKSTOREAPP_USER with eureka with status UP
+2022-09-21 11:29:30.949  INFO 16972 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663739970949, current=UP, previous=STARTING]
+2022-09-21 11:29:30.951  INFO 16972 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 11:29:30.970  INFO 16972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-21 11:29:30.971  INFO 16972 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9090
+2022-09-21 11:29:30.993  INFO 16972 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 11:29:31.009  INFO 16972 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 6.397 seconds (JVM running for 7.207)
+2022-09-21 11:29:31.014  INFO 16972 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
 Hello! Welcome to Book Store Project!
-2022-09-19 00:08:19.962  INFO 7715 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-19 00:08:19.963  INFO 7715 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-19 00:08:19.965  INFO 7715 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-09-19 00:08:23.308  WARN 7715 --- [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: ID: 2, does not exist]
-2022-09-19 00:09:02.068  WARN 7715 --- [http-nio-9090-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: Email Address: skntime0@gmail.co, does not exist]
-2022-09-19 00:10:45.375  WARN 7715 --- [http-nio-9090-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2022-09-19 00:12:59.729  WARN 7715 --- [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: Error: Cannot find User ID 3]
-2022-09-19 00:13:52.174  WARN 7715 --- [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported]
-2022-09-19 00:13:58.234  WARN 7715 --- [http-nio-9090-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2022-09-19 00:14:21.565  WARN 7715 --- [http-nio-9090-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: Login Failed, Wrong Password!!!]
-2022-09-19 00:16:25.278  WARN 7715 --- [http-nio-9090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: Invalid Email Address]
-2022-09-19 00:17:02.539  WARN 7715 --- [http-nio-9090-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: Invalid Email Address]
-2022-09-19 00:17:23.182  WARN 7715 --- [http-nio-9090-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2022-09-19 00:27:51.499  INFO 7715 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-09-19 00:27:51.502  INFO 7715 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-09-19 00:27:51.516  INFO 7715 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-09-19 00:27:58.670  INFO 8391 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 8391 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
-2022-09-19 00:27:58.672  INFO 8391 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
-2022-09-19 00:27:58.759  INFO 8391 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-09-19 00:27:58.760  INFO 8391 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-09-19 00:27:59.823  INFO 8391 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-19 00:27:59.898  INFO 8391 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interfaces.
-2022-09-19 00:28:00.749  INFO 8391 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2022-09-19 00:28:00.762  INFO 8391 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-19 00:28:00.763  INFO 8391 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-19 00:28:00.833  INFO 8391 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-19 00:28:00.833  INFO 8391 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2071 ms
-2022-09-19 00:28:01.060  INFO 8391 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-19 00:28:01.108  INFO 8391 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-19 00:28:01.280  INFO 8391 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-19 00:28:01.371  INFO 8391 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-19 00:28:01.788  INFO 8391 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-19 00:28:01.817  INFO 8391 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-09-19 00:28:02.514  INFO 8391 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-19 00:28:02.522  INFO 8391 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-19 00:28:02.993  WARN 8391 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-19 00:28:03.336  WARN 8391 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2022-09-19 00:28:03.442  INFO 8391 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-09-19 00:28:03.479  INFO 8391 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2022-09-19 00:28:03.493  INFO 8391 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 5.461 seconds (JVM running for 6.183)
-2022-09-19 00:28:03.497  INFO 8391 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+2022-09-21 11:29:53.044  INFO 16972 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-21 11:29:53.044  INFO 16972 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-21 11:29:53.046  INFO 16972 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-09-21 11:34:30.613  INFO 16972 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:39:30.614  INFO 16972 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:44:30.616  INFO 16972 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:47:54.523  INFO 16972 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKSTOREAPP_USER with eureka with status DOWN
+2022-09-21 11:47:54.524  INFO 16972 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663741074524, current=DOWN, previous=UP]
+2022-09-21 11:47:54.524  INFO 16972 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 11:47:54.533  INFO 16972 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 11:47:54.541  INFO 16972 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 11:47:54.545  INFO 16972 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-21 11:47:54.560  INFO 16972 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-21 11:47:54.561  INFO 16972 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-09-21 11:47:57.566  INFO 16972 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-09-21 11:47:57.570  INFO 16972 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - deregister  status: 200
+2022-09-21 11:47:57.578  INFO 16972 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-09-21 11:48:01.929  INFO 18967 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 18967 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-21 11:48:01.932  INFO 18967 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-21 11:48:02.000  INFO 18967 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-21 11:48:02.001  INFO 18967 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-21 11:48:02.871  INFO 18967 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-21 11:48:03.020  INFO 18967 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 1 JPA repository interfaces.
+2022-09-21 11:48:03.350  INFO 18967 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=48f5dd24-1cab-321f-9892-82647179fed9
+2022-09-21 11:48:04.122  INFO 18967 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-21 11:48:04.133  INFO 18967 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-21 11:48:04.134  INFO 18967 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-21 11:48:04.221  INFO 18967 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-21 11:48:04.221  INFO 18967 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2219 ms
+2022-09-21 11:48:04.398  INFO 18967 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-21 11:48:04.455  INFO 18967 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-21 11:48:04.585  INFO 18967 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-21 11:48:04.679  INFO 18967 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-21 11:48:05.030  INFO 18967 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-21 11:48:05.052  INFO 18967 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-21 11:48:05.654  INFO 18967 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-21 11:48:05.662  INFO 18967 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 11:48:06.070  WARN 18967 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-21 11:48:06.388  WARN 18967 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-21 11:48:06.522  WARN 18967 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-09-21 11:48:06.613  INFO 18967 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-09-21 11:48:06.762  WARN 18967 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-21 11:48:06.794  INFO 18967 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-09-21 11:48:06.922  INFO 18967 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-09-21 11:48:06.927  INFO 18967 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:48:06.966  INFO 18967 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-09-21 11:48:06.967  INFO 18967 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-09-21 11:48:06.967  INFO 18967 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-09-21 11:48:06.968  INFO 18967 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-09-21 11:48:06.968  INFO 18967 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-09-21 11:48:06.968  INFO 18967 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-09-21 11:48:06.968  INFO 18967 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-09-21 11:48:07.300  INFO 18967 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-09-21 11:48:07.305  INFO 18967 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-09-21 11:48:07.308  INFO 18967 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-09-21 11:48:07.316  INFO 18967 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1663741087314 with initial instances count: 2
+2022-09-21 11:48:07.320  INFO 18967 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKSTOREAPP_USER with eureka with status UP
+2022-09-21 11:48:07.321  INFO 18967 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663741087321, current=UP, previous=STARTING]
+2022-09-21 11:48:07.323  INFO 18967 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 11:48:07.343  INFO 18967 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-21 11:48:07.344  INFO 18967 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9090
+2022-09-21 11:48:07.367  INFO 18967 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 11:48:07.390  INFO 18967 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 6.072 seconds (JVM running for 6.749)
+2022-09-21 11:48:07.395  INFO 18967 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
 Hello! Welcome to Book Store Project!
-2022-09-19 00:28:15.590  INFO 8391 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-19 00:28:15.591  INFO 8391 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-19 00:28:15.593  INFO 8391 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-09-19 00:29:45.074  INFO 8391 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-09-19 00:29:45.079  INFO 8391 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-09-19 00:29:45.088  INFO 8391 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-09-19 00:29:50.115  INFO 8561 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 8561 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
-2022-09-19 00:29:50.118  INFO 8561 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
-2022-09-19 00:29:50.197  INFO 8561 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-09-19 00:29:50.198  INFO 8561 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-09-19 00:29:51.247  INFO 8561 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-19 00:29:51.306  INFO 8561 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interfaces.
-2022-09-19 00:29:52.183  INFO 8561 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2022-09-19 00:29:52.195  INFO 8561 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-19 00:29:52.195  INFO 8561 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-19 00:29:52.276  INFO 8561 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-19 00:29:52.277  INFO 8561 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2078 ms
-2022-09-19 00:29:52.470  INFO 8561 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-19 00:29:52.513  INFO 8561 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-19 00:29:52.674  INFO 8561 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-19 00:29:52.759  INFO 8561 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-19 00:29:53.128  INFO 8561 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-19 00:29:53.156  INFO 8561 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-09-19 00:29:53.832  INFO 8561 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-19 00:29:53.840  INFO 8561 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-19 00:29:54.287  WARN 8561 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-19 00:29:54.654  WARN 8561 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2022-09-19 00:29:54.768  INFO 8561 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-09-19 00:29:54.799  INFO 8561 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2022-09-19 00:29:54.814  INFO 8561 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 5.338 seconds (JVM running for 6.072)
-2022-09-19 00:29:54.820  INFO 8561 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+2022-09-21 11:49:00.886  INFO 18967 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-21 11:49:00.887  INFO 18967 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-21 11:49:00.888  INFO 18967 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-21 11:53:06.990  INFO 18967 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:53:11.487  INFO 18967 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKSTOREAPP_USER with eureka with status DOWN
+2022-09-21 11:53:11.488  INFO 18967 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663741391488, current=DOWN, previous=UP]
+2022-09-21 11:53:11.488  INFO 18967 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 11:53:11.493  INFO 18967 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 11:53:11.508  INFO 18967 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 11:53:11.513  INFO 18967 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-21 11:53:11.524  INFO 18967 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-21 11:53:11.525  INFO 18967 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-09-21 11:53:14.529  INFO 18967 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-09-21 11:53:14.534  INFO 18967 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - deregister  status: 200
+2022-09-21 11:53:14.541  INFO 18967 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-09-21 11:53:18.685  INFO 19388 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 19388 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-21 11:53:18.687  INFO 19388 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-21 11:53:18.753  INFO 19388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-21 11:53:18.754  INFO 19388 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-21 11:53:19.659  INFO 19388 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-21 11:53:19.803  INFO 19388 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 1 JPA repository interfaces.
+2022-09-21 11:53:20.136  INFO 19388 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=48f5dd24-1cab-321f-9892-82647179fed9
+2022-09-21 11:53:20.959  INFO 19388 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-21 11:53:20.968  INFO 19388 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-21 11:53:20.969  INFO 19388 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-21 11:53:21.055  INFO 19388 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-21 11:53:21.056  INFO 19388 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2301 ms
+2022-09-21 11:53:21.272  INFO 19388 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-21 11:53:21.329  INFO 19388 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-21 11:53:21.481  INFO 19388 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-21 11:53:21.582  INFO 19388 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-21 11:53:21.940  INFO 19388 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-21 11:53:21.963  INFO 19388 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-21 11:53:22.593  INFO 19388 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-21 11:53:22.600  INFO 19388 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 11:53:23.014  WARN 19388 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-21 11:53:23.325  WARN 19388 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-21 11:53:23.506  WARN 19388 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-09-21 11:53:23.605  INFO 19388 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-09-21 11:53:23.761  WARN 19388 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-21 11:53:23.798  INFO 19388 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-09-21 11:53:23.929  INFO 19388 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-09-21 11:53:23.935  INFO 19388 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 11:53:23.966  INFO 19388 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-09-21 11:53:23.966  INFO 19388 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-09-21 11:53:23.967  INFO 19388 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-09-21 11:53:23.967  INFO 19388 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-09-21 11:53:23.967  INFO 19388 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-09-21 11:53:23.967  INFO 19388 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-09-21 11:53:23.968  INFO 19388 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-09-21 11:53:24.331  INFO 19388 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-09-21 11:53:24.335  INFO 19388 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-09-21 11:53:24.338  INFO 19388 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-09-21 11:53:24.344  INFO 19388 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1663741404343 with initial instances count: 2
+2022-09-21 11:53:24.347  INFO 19388 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKSTOREAPP_USER with eureka with status UP
+2022-09-21 11:53:24.347  INFO 19388 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663741404347, current=UP, previous=STARTING]
+2022-09-21 11:53:24.349  INFO 19388 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 11:53:24.369  INFO 19388 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-21 11:53:24.371  INFO 19388 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9090
+2022-09-21 11:53:24.393  INFO 19388 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 11:53:24.418  INFO 19388 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 6.356 seconds (JVM running for 7.073)
+2022-09-21 11:53:24.423  INFO 19388 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
 Hello! Welcome to Book Store Project!
-2022-09-19 00:30:30.390  INFO 8561 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-09-19 00:30:30.395  INFO 8561 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-09-19 00:30:30.411  INFO 8561 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-09-19 00:30:35.605  INFO 8688 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 8688 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
-2022-09-19 00:30:35.608  INFO 8688 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
-2022-09-19 00:30:35.682  INFO 8688 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-09-19 00:30:35.682  INFO 8688 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-09-19 00:30:36.686  INFO 8688 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-09-19 00:30:36.753  INFO 8688 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interfaces.
-2022-09-19 00:30:37.646  INFO 8688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2022-09-19 00:30:37.659  INFO 8688 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-09-19 00:30:37.660  INFO 8688 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
-2022-09-19 00:30:37.733  INFO 8688 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-09-19 00:30:37.734  INFO 8688 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2051 ms
-2022-09-19 00:30:37.941  INFO 8688 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-09-19 00:30:37.989  INFO 8688 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
-2022-09-19 00:30:38.166  INFO 8688 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-09-19 00:30:38.275  INFO 8688 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-09-19 00:30:38.718  INFO 8688 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-09-19 00:30:38.748  INFO 8688 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-09-19 00:30:39.443  INFO 8688 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-09-19 00:30:39.452  INFO 8688 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-09-19 00:30:39.904  WARN 8688 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-09-19 00:30:40.242  WARN 8688 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2022-09-19 00:30:40.360  INFO 8688 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-09-19 00:30:40.400  INFO 8688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2022-09-19 00:30:40.421  INFO 8688 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 5.45 seconds (JVM running for 6.117)
-2022-09-19 00:30:40.427  INFO 8688 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+2022-09-21 11:53:49.917  INFO 19388 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-21 11:53:49.918  INFO 19388 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-21 11:53:49.919  INFO 19388 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-09-21 11:58:23.972  INFO 19388 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 12:03:23.973  INFO 19388 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 12:08:23.975  INFO 19388 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 12:13:23.977  INFO 19388 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 12:18:23.978  INFO 19388 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 12:23:23.980  INFO 19388 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 12:28:23.982  INFO 19388 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 12:33:23.983  INFO 19388 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 12:38:23.985  INFO 19388 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 12:43:23.986  INFO 19388 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 12:48:23.988  INFO 19388 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 12:53:23.990  INFO 19388 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 12:56:44.991  INFO 19388 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKSTOREAPP_USER with eureka with status DOWN
+2022-09-21 12:56:44.991  INFO 19388 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663745204991, current=DOWN, previous=UP]
+2022-09-21 12:56:44.992  INFO 19388 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 12:56:45.000  INFO 19388 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 12:56:45.007  INFO 19388 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 12:56:45.009  INFO 19388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-21 12:56:45.015  INFO 19388 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-21 12:56:45.016  INFO 19388 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-09-21 12:56:48.020  INFO 19388 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-09-21 12:56:48.026  INFO 19388 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - deregister  status: 200
+2022-09-21 12:56:48.031  INFO 19388 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-09-21 15:30:41.158  INFO 4219 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 4219 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-21 15:30:41.161  INFO 4219 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-21 15:30:41.246  INFO 4219 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-21 15:30:41.247  INFO 4219 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-21 15:30:42.641  INFO 4219 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-21 15:30:42.911  INFO 4219 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 248 ms. Found 1 JPA repository interfaces.
+2022-09-21 15:30:43.416  INFO 4219 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=48f5dd24-1cab-321f-9892-82647179fed9
+2022-09-21 15:30:44.772  INFO 4219 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-21 15:30:44.791  INFO 4219 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-21 15:30:44.792  INFO 4219 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-21 15:30:44.931  INFO 4219 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-21 15:30:44.932  INFO 4219 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3684 ms
+2022-09-21 15:30:45.178  INFO 4219 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-21 15:30:45.252  INFO 4219 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-21 15:30:45.433  INFO 4219 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-21 15:30:45.577  INFO 4219 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-21 15:30:45.990  INFO 4219 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-21 15:30:46.019  INFO 4219 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-21 15:30:46.743  INFO 4219 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-21 15:30:46.752  INFO 4219 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 15:30:47.263  WARN 4219 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-21 15:30:47.665  WARN 4219 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-21 15:30:47.883  WARN 4219 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-09-21 15:30:48.015  INFO 4219 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-09-21 15:30:48.216  WARN 4219 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-21 15:30:48.252  INFO 4219 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-09-21 15:30:48.399  INFO 4219 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-09-21 15:30:48.408  INFO 4219 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 15:30:48.451  INFO 4219 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-09-21 15:30:48.452  INFO 4219 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-09-21 15:30:48.452  INFO 4219 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-09-21 15:30:48.453  INFO 4219 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-09-21 15:30:48.455  INFO 4219 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-09-21 15:30:48.456  INFO 4219 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-09-21 15:30:48.456  INFO 4219 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-09-21 15:30:48.905  INFO 4219 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-09-21 15:30:48.908  INFO 4219 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-09-21 15:30:48.913  INFO 4219 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-09-21 15:30:48.921  INFO 4219 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1663754448920 with initial instances count: 0
+2022-09-21 15:30:48.926  INFO 4219 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKSTOREAPP_USER with eureka with status UP
+2022-09-21 15:30:48.927  INFO 4219 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663754448927, current=UP, previous=STARTING]
+2022-09-21 15:30:48.930  INFO 4219 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 15:30:48.954  INFO 4219 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-21 15:30:48.955  INFO 4219 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9090
+2022-09-21 15:30:48.997  INFO 4219 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 8.686 seconds (JVM running for 9.691)
+2022-09-21 15:30:49.001  INFO 4219 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
 Hello! Welcome to Book Store Project!
-2022-09-19 00:30:45.515  INFO 8688 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-09-19 00:30:45.516  INFO 8688 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-09-19 00:30:45.517  INFO 8688 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-09-19 00:31:00.045  WARN 8688 --- [http-nio-9090-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2022-09-21 15:30:49.076  INFO 4219 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 15:31:18.909  INFO 4219 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-09-21 15:31:18.910  INFO 4219 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-09-21 15:31:18.910  INFO 4219 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-09-21 15:31:18.911  INFO 4219 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-09-21 15:31:18.911  INFO 4219 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-09-21 15:31:18.912  INFO 4219 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-09-21 15:31:18.912  INFO 4219 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-09-21 15:31:18.957  INFO 4219 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-09-21 15:35:48.460  INFO 4219 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 15:38:43.007  INFO 4219 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-21 15:38:43.007  INFO 4219 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-21 15:38:43.009  INFO 4219 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-09-21 15:38:43.120  WARN 4219 --- [http-nio-9090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: ID: 2, does not exist]
+2022-09-21 15:40:48.461  INFO 4219 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 15:45:05.798  WARN 4219 --- [http-nio-9090-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: ID: 2, does not exist]
+2022-09-21 15:45:48.462  INFO 4219 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 15:47:01.139  WARN 4219 --- [http-nio-9090-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: ID: 2, does not exist]
+2022-09-21 15:49:27.607  INFO 4219 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKSTOREAPP_USER with eureka with status DOWN
+2022-09-21 15:49:27.607  INFO 4219 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663755567607, current=DOWN, previous=UP]
+2022-09-21 15:49:27.608  INFO 4219 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 15:49:27.616  INFO 4219 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 15:49:27.625  INFO 4219 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 15:49:27.630  INFO 4219 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-21 15:49:27.645  INFO 4219 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-21 15:49:27.646  INFO 4219 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-09-21 15:49:30.651  INFO 4219 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-09-21 15:49:30.656  INFO 4219 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - deregister  status: 200
+2022-09-21 15:49:30.664  INFO 4219 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-09-21 15:49:37.201  INFO 6293 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 6293 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-21 15:49:37.204  INFO 6293 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-21 15:49:37.287  INFO 6293 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-21 15:49:37.288  INFO 6293 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-21 15:49:38.385  INFO 6293 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-21 15:49:38.538  INFO 6293 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 142 ms. Found 1 JPA repository interfaces.
+2022-09-21 15:49:38.906  INFO 6293 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=48f5dd24-1cab-321f-9892-82647179fed9
+2022-09-21 15:49:39.836  INFO 6293 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-21 15:49:39.849  INFO 6293 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-21 15:49:39.849  INFO 6293 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-21 15:49:39.953  INFO 6293 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-21 15:49:39.954  INFO 6293 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2665 ms
+2022-09-21 15:49:40.202  INFO 6293 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-21 15:49:40.281  INFO 6293 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-21 15:49:40.453  INFO 6293 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-21 15:49:40.574  INFO 6293 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-21 15:49:40.953  INFO 6293 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-21 15:49:40.981  INFO 6293 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-21 15:49:41.705  INFO 6293 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-21 15:49:41.715  INFO 6293 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 15:49:42.185  WARN 6293 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-21 15:49:42.567  WARN 6293 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-21 15:49:42.798  WARN 6293 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-09-21 15:49:42.928  INFO 6293 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-09-21 15:49:43.145  WARN 6293 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-21 15:49:43.185  INFO 6293 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-09-21 15:49:43.316  INFO 6293 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-09-21 15:49:43.323  INFO 6293 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 15:49:43.359  INFO 6293 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-09-21 15:49:43.360  INFO 6293 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-09-21 15:49:43.361  INFO 6293 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-09-21 15:49:43.361  INFO 6293 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-09-21 15:49:43.361  INFO 6293 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-09-21 15:49:43.361  INFO 6293 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-09-21 15:49:43.362  INFO 6293 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-09-21 15:49:43.765  INFO 6293 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-09-21 15:49:43.770  INFO 6293 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-09-21 15:49:43.774  INFO 6293 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-09-21 15:49:43.781  INFO 6293 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1663755583780 with initial instances count: 3
+2022-09-21 15:49:43.785  INFO 6293 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKSTOREAPP_USER with eureka with status UP
+2022-09-21 15:49:43.785  INFO 6293 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663755583785, current=UP, previous=STARTING]
+2022-09-21 15:49:43.787  INFO 6293 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 15:49:43.811  INFO 6293 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-21 15:49:43.813  INFO 6293 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9090
+2022-09-21 15:49:43.839  INFO 6293 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 15:49:43.863  INFO 6293 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 7.401 seconds (JVM running for 8.294)
+2022-09-21 15:49:43.869  INFO 6293 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+Hello! Welcome to Book Store Project!
+2022-09-21 15:49:54.585  INFO 6293 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-21 15:49:54.586  INFO 6293 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-21 15:49:54.590  INFO 6293 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-09-21 15:54:43.366  INFO 6293 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 15:56:29.549  INFO 6293 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKSTOREAPP_USER with eureka with status DOWN
+2022-09-21 15:56:29.550  INFO 6293 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663755989550, current=DOWN, previous=UP]
+2022-09-21 15:56:29.550  INFO 6293 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 15:56:29.557  INFO 6293 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 15:56:29.570  INFO 6293 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 15:56:29.575  INFO 6293 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-21 15:56:29.598  INFO 6293 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-21 15:56:29.599  INFO 6293 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-09-21 15:56:32.605  INFO 6293 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-09-21 15:56:32.615  INFO 6293 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - deregister  status: 200
+2022-09-21 15:56:32.635  INFO 6293 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-09-21 15:56:40.215  INFO 6914 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 6914 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-21 15:56:40.218  INFO 6914 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-21 15:56:40.362  INFO 6914 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-21 15:56:40.363  INFO 6914 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-21 15:56:41.943  INFO 6914 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-21 15:56:42.245  INFO 6914 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 279 ms. Found 1 JPA repository interfaces.
+2022-09-21 15:56:42.873  INFO 6914 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=48f5dd24-1cab-321f-9892-82647179fed9
+2022-09-21 15:56:43.846  INFO 6914 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-21 15:56:43.859  INFO 6914 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-21 15:56:43.860  INFO 6914 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-21 15:56:43.976  INFO 6914 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-21 15:56:43.976  INFO 6914 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3612 ms
+2022-09-21 15:56:44.218  INFO 6914 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-21 15:56:44.285  INFO 6914 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-21 15:56:44.448  INFO 6914 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-21 15:56:44.564  INFO 6914 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-21 15:56:44.924  INFO 6914 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-21 15:56:44.951  INFO 6914 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-21 15:56:45.715  INFO 6914 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-21 15:56:45.726  INFO 6914 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 15:56:46.238  WARN 6914 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-21 15:56:46.590  WARN 6914 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-21 15:56:46.761  WARN 6914 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-09-21 15:56:46.880  INFO 6914 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-09-21 15:56:47.072  WARN 6914 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-21 15:56:47.110  INFO 6914 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-09-21 15:56:47.237  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-09-21 15:56:47.242  INFO 6914 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 15:56:47.274  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-09-21 15:56:47.275  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-09-21 15:56:47.275  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-09-21 15:56:47.275  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-09-21 15:56:47.276  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-09-21 15:56:47.276  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-09-21 15:56:47.276  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-09-21 15:56:47.669  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-09-21 15:56:47.674  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-09-21 15:56:47.679  INFO 6914 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-09-21 15:56:47.687  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1663756007686 with initial instances count: 3
+2022-09-21 15:56:47.691  INFO 6914 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKSTOREAPP_USER with eureka with status UP
+2022-09-21 15:56:47.692  INFO 6914 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663756007692, current=UP, previous=STARTING]
+2022-09-21 15:56:47.694  INFO 6914 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 15:56:47.715  INFO 6914 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-21 15:56:47.717  INFO 6914 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9090
+2022-09-21 15:56:47.740  INFO 6914 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 15:56:47.767  INFO 6914 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 9.036 seconds (JVM running for 10.04)
+2022-09-21 15:56:47.773  INFO 6914 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+Hello! Welcome to Book Store Project!
+2022-09-21 16:01:45.628  INFO 6914 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-21 16:01:45.629  INFO 6914 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-21 16:01:45.632  INFO 6914 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-09-21 16:01:47.279  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 16:06:47.281  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 16:11:47.282  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 16:16:47.283  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 16:21:47.285  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 16:26:47.287  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 16:31:47.289  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 16:36:47.290  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 16:41:47.292  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 16:46:47.293  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 16:51:47.295  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 16:56:47.296  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 17:01:47.297  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 17:05:17.157  WARN 6914 --- [http-nio-9090-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: Invalid Token]
+2022-09-21 17:05:33.611  WARN 6914 --- [http-nio-9090-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: Invalid Token]
+2022-09-21 17:05:52.635  WARN 6914 --- [http-nio-9090-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.example.bookstore_user.exception.UserException: Invalid Token]
+2022-09-21 17:06:47.298  INFO 6914 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 17:09:52.577  INFO 6914 --- [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BOOKSTOREAPP_USER with eureka with status DOWN
+2022-09-21 17:09:52.578  INFO 6914 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663760392578, current=DOWN, previous=UP]
+2022-09-21 17:09:52.578  INFO 6914 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 17:09:52.589  INFO 6914 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 17:09:52.597  INFO 6914 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 17:09:52.603  INFO 6914 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-09-21 17:09:52.614  INFO 6914 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-09-21 17:09:52.615  INFO 6914 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-09-21 17:09:55.620  INFO 6914 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-09-21 17:09:55.624  INFO 6914 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - deregister  status: 200
+2022-09-21 17:09:55.630  INFO 6914 --- [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-09-21 17:10:01.562  INFO 11757 --- [restartedMain] c.e.b.BookStoreUserApplication           : Starting BookStoreUserApplication using Java 17.0.4 on hp-HP-ProBook-440-G5 with PID 11757 (/home/hp/IdeaProjects/BookStore_User/target/classes started by hp in /home/hp/IdeaProjects/BookStore_User)
+2022-09-21 17:10:01.565  INFO 11757 --- [restartedMain] c.e.b.BookStoreUserApplication           : The following 1 profile is active: "dev"
+2022-09-21 17:10:01.649  INFO 11757 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-21 17:10:01.650  INFO 11757 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-21 17:10:02.670  INFO 11757 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-21 17:10:02.835  INFO 11757 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153 ms. Found 1 JPA repository interfaces.
+2022-09-21 17:10:03.266  INFO 11757 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=48f5dd24-1cab-321f-9892-82647179fed9
+2022-09-21 17:10:04.114  INFO 11757 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-09-21 17:10:04.128  INFO 11757 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-21 17:10:04.128  INFO 11757 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-21 17:10:04.231  INFO 11757 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-21 17:10:04.231  INFO 11757 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2580 ms
+2022-09-21 17:10:04.436  INFO 11757 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-09-21 17:10:04.509  INFO 11757 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-09-21 17:10:04.681  INFO 11757 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-09-21 17:10:04.806  INFO 11757 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-21 17:10:05.212  INFO 11757 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-21 17:10:05.235  INFO 11757 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-09-21 17:10:05.975  INFO 11757 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-09-21 17:10:05.984  INFO 11757 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-21 17:10:06.453  WARN 11757 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-21 17:10:06.794  WARN 11757 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-21 17:10:06.944  WARN 11757 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-09-21 17:10:07.049  INFO 11757 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-09-21 17:10:07.208  WARN 11757 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-09-21 17:10:07.240  INFO 11757 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-09-21 17:10:07.362  INFO 11757 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-09-21 17:10:07.376  INFO 11757 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 17:10:07.403  INFO 11757 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-09-21 17:10:07.404  INFO 11757 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-09-21 17:10:07.404  INFO 11757 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-09-21 17:10:07.405  INFO 11757 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-09-21 17:10:07.405  INFO 11757 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-09-21 17:10:07.405  INFO 11757 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-09-21 17:10:07.405  INFO 11757 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-09-21 17:10:07.778  INFO 11757 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-09-21 17:10:07.782  INFO 11757 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-09-21 17:10:07.786  INFO 11757 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-09-21 17:10:07.794  INFO 11757 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1663760407793 with initial instances count: 2
+2022-09-21 17:10:07.799  INFO 11757 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BOOKSTOREAPP_USER with eureka with status UP
+2022-09-21 17:10:07.800  INFO 11757 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1663760407800, current=UP, previous=STARTING]
+2022-09-21 17:10:07.802  INFO 11757 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090: registering service...
+2022-09-21 17:10:07.826  INFO 11757 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-09-21 17:10:07.827  INFO 11757 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9090
+2022-09-21 17:10:07.850  INFO 11757 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BOOKSTOREAPP_USER/192.168.1.12:BookStoreApp_User:9090 - registration status: 204
+2022-09-21 17:10:07.877  INFO 11757 --- [restartedMain] c.e.b.BookStoreUserApplication           : Started BookStoreUserApplication in 7.082 seconds (JVM running for 7.962)
+2022-09-21 17:10:07.884  INFO 11757 --- [restartedMain] c.e.b.BookStoreUserApplication           : 
+Hello! Welcome to Book Store Project!
+2022-09-21 17:10:51.405  INFO 11757 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-09-21 17:10:51.405  INFO 11757 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-09-21 17:10:51.409  INFO 11757 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-09-21 17:15:07.409  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 17:20:07.411  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 17:25:07.412  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 17:30:07.414  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 17:35:07.416  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 17:40:07.417  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 17:45:07.419  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 17:50:07.420  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 17:55:07.421  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 18:00:07.422  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 18:05:07.424  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 18:10:07.425  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 18:15:07.427  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 18:20:07.429  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 18:25:07.430  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 18:30:07.432  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 18:35:07.434  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 18:40:07.435  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-09-21 18:45:07.436  INFO 11757 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

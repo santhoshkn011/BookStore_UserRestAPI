@@ -3,14 +3,16 @@ package com.example.bookstore_user.model;
 import com.example.bookstore_user.dto.UserDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 @NoArgsConstructor
+@Data
 @Table(name = "user")
-public @Data class UserDetails {
+public @ToString class UserDetails {
     //User Entities
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

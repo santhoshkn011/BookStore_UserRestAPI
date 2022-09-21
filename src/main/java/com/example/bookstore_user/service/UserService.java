@@ -11,6 +11,7 @@ import com.example.bookstore_user.utility.EmailSenderService;
 import com.example.bookstore_user.utility.TokenUtility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 import java.util.Optional;
@@ -23,6 +24,7 @@ public class UserService implements IUserService {
     TokenUtility tokenUtility;
     @Autowired
     EmailSenderService emailSender;
+
     //Generated token after saving data and sent email
     @Override
     public String insertData(UserDTO userDTO) throws UserException {
@@ -42,6 +44,16 @@ public class UserService implements IUserService {
             return existingData.get();
         }else
             throw new UserException("Invalid Token");
+    }
+    //Get User Details by Token (Microservice)
+    @Override
+    public UserDetails getUserDetailsByToken(String token) {
+        Long Userid = tokenUtility.decodeToken(token);
+        Optional<UserDetails> existingData = userRepo.findById(Userid);
+        if(existingData.isPresent()){
+            return existingData.get();
+        }else
+            return null;
     }
     //Login check
     @Override
@@ -111,6 +123,15 @@ public class UserService implements IUserService {
             return userDetails;
         } else
             throw new UserException("ID: " + id + ", does not exist");
+    }
+    //Get the user data by id (microservice)
+    @Override
+    public UserDetails getUserDetailsById(Long id) {
+        UserDetails userDetails = userRepo.findById(id).orElse(null);
+        if (userDetails != null) {
+            return userDetails;
+        } else
+            return null;
     }
 
     //Get the User Details by Email Address

@@ -15,6 +15,7 @@ public interface IUserService {
     List<UserDetails> getAllUserData();
 
     UserDetails getUserDataById(Long id);
+    UserDetails getUserDetailsById(Long id);
 
     UserDetails getUserDataByEmailAddress(String email);
 
@@ -31,4 +32,6 @@ public interface IUserService {
     String forgotPassword(String email);
 
     String resetPassword(ForgotPasswordDTO forgotPasswordDTO);
+
+    UserDetails getUserDetailsByToken(String token);
 }
